@@ -25,13 +25,13 @@ class AppNavigator extends Component {
 
     renderScene(route, navigator) {
         if (route.index === 0) {
-            return <MainPage navigator={navigator}/>
+            return <MainPage navigator={navigator} />
         }
         else if (route.index === 1) {
-            return <AddPage navigator={navigator}/>
+            return <AddPage navigator={navigator} />
         }
         else if (route.index === 2) {
-            return <DetailPage navigator={navigator} item={route.item}/>
+            return <DetailPage navigator={navigator} item={route.item} />
         }
     }
 }
