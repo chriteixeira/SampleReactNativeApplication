@@ -55,7 +55,6 @@ var style = StyleSheet.create({
         marginTop: 10,
         paddingVertical: 15,
     },
-
     // Item Detail
     itemDetailText: {
         fontSize: 14,

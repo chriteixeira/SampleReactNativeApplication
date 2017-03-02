@@ -53,7 +53,9 @@ class MainPage extends Component {
 
 			var data = [];
 			snapshot.forEach((child) => {
-				data.push(child.val());
+				var item = child.val();
+				item.key = child.key;
+				data.push(item);
 			});
 
 			this.setState({
