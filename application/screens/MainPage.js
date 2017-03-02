@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import ReactNative, { View, ListView, Text } from 'react-native';
+import NavigationBar from 'react-native-navbar';
 
 const Button = require('./../components/Button');
 const ListItem = require('./../components/ListItem');
@@ -27,13 +28,17 @@ class MainPage extends Component {
 	}
 
 	render() {
+		const rightButtonConfig = {
+			title: 'Add',
+			handler: () => this.navAddPage(),
+		};
 		return (
 			<View style={styles.container}>
-				<View style={styles.titleBar}>
-					<Text style={styles.titleBarText}>Main Page</Text>
-				</View>
+				<NavigationBar
+					title={{ title: 'Main Page' }}
+					rightButton={rightButtonConfig}
+				/>
 				<ListView dataSource={this.state.dataSource} renderRow={this.renderRow.bind(this)} />
-				<Button title="Add" onPress={this.navAddPage.bind(this)} navigator={this.props.navigator}/>
 			</View>
 		);
 	}

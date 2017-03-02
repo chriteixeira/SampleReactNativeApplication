@@ -2,6 +2,7 @@
 
 import React, { Component, BackAndroid } from 'react';
 import ReactNative, { View, ListView, Text, TextInput, ScrollView } from 'react-native';
+import NavigationBar from 'react-native-navbar';
 
 const styles = require('./../styles/styles.js');
 const Button = require('./../components/Button');
@@ -22,11 +23,18 @@ class AddPage extends Component {
 	}
 
 	render() {
+
+		const leftButtonConfig = {
+			title: 'Back',
+			handler: () => this.navBack(),
+		};
+
 		return (
 			<View style={styles.container}>
-				<View style={styles.titleBar}>
-					<Text style={styles.titleBarText}>Item Page</Text>
-				</View>
+				<NavigationBar
+					title={{ title: 'Add a new item' }}
+					leftButton={leftButtonConfig}
+				/>
 				<View style={styles.addPage}>
 					<TextInput
 						style={styles.textInput}
@@ -41,7 +49,6 @@ class AddPage extends Component {
 						placeholder={'description'}
 					/>
 					<Button title="Add" onPress={this.itemAdd.bind(this)} navigator={this.props.navigator} />
-					<Button title="Back" onPress={this.navBack.bind(this)} navigator={this.props.navigator} />
 				</View>
 			</View>
 		);
