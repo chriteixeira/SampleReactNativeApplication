@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 import ReactNative, { View, ListView, Text } from 'react-native';
 import NavigationBar from 'react-native-navbar';
 
-const Button = require('./../components/Button');
-const ListItem = require('./../components/ListItem');
-const styles = require('./../styles/styles.js');
+import Button from './../components/Button'
+import ListItem from './../components/ListItem';
+import styles from './../styles/styles.js';
 
 import database from './../utils/database'
 
@@ -19,7 +19,6 @@ class MainPage extends Component {
 		this.state = {
 			dataSource: new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 }),
 		};
-
 		this.itemListRef = firebaseApp.database().ref('items');
 	}
 

@@ -4,8 +4,8 @@ import React, { Component, BackAndroid } from 'react';
 import ReactNative, { View, ListView, Text, TextInput, ScrollView } from 'react-native';
 import NavigationBar from 'react-native-navbar';
 
-const styles = require('./../styles/styles.js');
-const Button = require('./../components/Button');
+import Button from './../components/Button'
+import styles from './../styles/styles.js';
 
 import database from './../utils/database'
 
