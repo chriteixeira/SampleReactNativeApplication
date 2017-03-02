@@ -29,7 +29,6 @@ class MainPage extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-
 				<View style={styles.titleBar}>
 					<Text style={styles.titleBarText}>Main Page</Text>
 				</View>

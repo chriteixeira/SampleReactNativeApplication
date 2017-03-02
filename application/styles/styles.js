@@ -6,16 +6,19 @@ var style = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
         flex: 1,
+        justifyContent: "flex-start",
+        alignItems: 'stretch',
     },
 
     // ListItem
     list: {
         backgroundColor: '#fff',
-        borderBottomColor: '#eee',
+        borderBottomColor: '#e3e3e3',
         borderColor: 'transparent',
         borderWidth: 1,
         padding: 10,
     },
+
     listText: {
         color: '#333',
         fontSize: 16,
@@ -25,7 +28,7 @@ var style = StyleSheet.create({
     titleBar: {
         backgroundColor: '#fff',
         borderColor: 'transparent',
-        borderBottomColor: '#eee',
+        borderBottomColor: '#a3a3a3',
         borderWidth: 1,
         padding: 10,
         justifyContent: 'center',
@@ -36,16 +39,21 @@ var style = StyleSheet.create({
         fontSize: 16,
         fontWeight: "500"
     },
-    
+
     // Button
     buttonText: {
-        fontSize: 18,
-        color: '#ffffff',
-        marginTop: 4,
+        color: '#fff',
+        fontSize: 14,
         textAlign: 'center',
+
     },
     button: {
         backgroundColor: '#48afdb',
+        alignSelf: 'stretch',
+        justifyContent: 'center',
+        borderRadius: 5,
+        marginTop: 10,
+        paddingVertical: 15,
     },
 
     // Item Detail
@@ -53,7 +61,22 @@ var style = StyleSheet.create({
         fontSize: 14,
         padding: 5,
 
-    }
+    },
+
+    addPage: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        paddingTop: 10,
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
+
+    textInput: {
+        color: '#5d5d5d',
+        marginTop: 10,
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
 })
 
 module.exports = style
